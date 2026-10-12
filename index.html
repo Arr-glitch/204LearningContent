@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<title>Task B Inspector Certification Simulator</title>
+<title>204 Learning Content</title>
 <style>
 :root{
   --bg:#0b1a23; --bg2:#0f2531; --panel:#133040; --panel2:#18394b; --edge:#2b5569;
@@ -764,7 +764,7 @@ function topbar(){
 function viewWelcome(){
  var last=store.get(PFX+'last'),ln='',ls='';
  if(last){try{var o=JSON.parse(last);ln=o.n||'';ls=o.s||'';}catch(e){}}
- return '<section class="panel"><div class="row" style="gap:14px">'+LOGO.replace('<svg','<svg style="width:54px;height:54px"')+'<div><h1>Inspector Certification Simulator</h1><p class="mut" style="margin:2px 0 0">Task B: robotics and smart inspection</p></div></div>'+
+ return '<section class="panel"><div class="row" style="gap:14px">'+LOGO.replace('<svg','<svg style="width:54px;height:54px"')+'<div><h1>Inspector Certification Simulator</h1><p class="mut" style="margin:2px 0 0">204 Learning Content</p></div></div>'+
   '<p style="margin-top:16px">You are the lead inspector on a refinery shutdown. Four case files are open on your board. Clear them to earn your certification level, build streaks and collect endorsement badges.</p>'+
   '<label for="nm">Full name</label><input type="text" id="nm" autocomplete="name" value="'+esc(ui.tmpName||ln)+'">'+
   '<label for="sid">Student ID (optional)</label><input type="text" id="sid" autocomplete="off" value="'+esc(ui.tmpId||ls)+'">'+
@@ -804,7 +804,7 @@ function viewQ(){
  else if(q.t==='cloze')body=vCloze(q,R);else body=vOpen(q,R);
  var last=S.qi===c.qs.length-1,allDone=caseDone(c);
  return '<h2 style="margin-bottom:2px">'+esc(c.t)+'</h2><p class="mut" style="margin-top:0">'+c.tid+'</p>'+stepper(c)+
-  '<section class="panel"><div class="qhead"><span>Task B, question '+q.n+'</span><span>'+(R.done?'Marks earned: <b>'+R.marks+'</b> of '+q.m:q.m+(q.m===1?' mark':' marks')+' available')+'</span></div>'+body+'</section>'+
+  '<section class="panel"><div class="qhead"><span>Question '+q.n+'</span><span>'+(R.done?'Marks earned: <b>'+R.marks+'</b> of '+q.m:q.m+(q.m===1?' mark':' marks')+' available')+'</span></div>'+body+'</section>'+
   '<div class="nav noprint"><button class="btn alt" data-act="prev" '+(S.qi===0?'disabled':'')+'>Previous</button>'+
   '<span class="row"><button class="btn alt" data-act="hub">Case board</button>'+
   (last?'<button class="btn" data-act="endcase" '+(allDone?'':'disabled')+'>'+(allDone?'Finish case':'Answer every question to finish')+'</button>':'<button class="btn" data-act="next">Next question</button>')+'</span></div>';
